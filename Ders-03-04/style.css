@@ -1,0 +1,86 @@
+/* CSS Renk özelliği */
+.cssOzelliks{
+    color: black;
+    /* RGB, RGBA, HEX veya Yukarıdaki gibi kullanabiliriz. */
+
+    /* FONT Size */
+    font-size: 15px;
+
+    /* Bold olayları */
+    font-weight: bold;
+    /* Font-Weight te azı font aileleri kabul etmeyebiliyor bu durumda sayı değeri veriyoruz. */
+
+    /*Metin Hizalamaları.*/
+    text-align: center; 
+    
+    /*Line Height --> Satır aralığı*/
+    line-height: 1.1; /*Font size ile orantılı çalışır burada %10 arttırıyor.*/
+
+    /* Metin dekorasyonu alt çizgi vb. */
+    text-decoration: overline;
+    text-decoration-color: red; /* Dekorasyonun rengi*/
+    text-underline-offset: 10px; /* Boşluğu ayarlama */
+    /*Font Aileleri */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Font style -> Italic vb*/
+    font-style: italic;
+
+    /*Harfler arası boşluk*/
+    letter-spacing: 10px;
+    word-spacing: 10px;
+
+    /* Metin Dönüştürme */
+    text-transform: capitalize;
+}
+    @import url("css"); /*Farklı CSS Dosyası dahil etme*/
+    /*2 tane div etiketimiz olsun. dive font-size:24px olsun. eğer 24px !important; yazarsa herkesi ez geç ben geçerliyim olur. Fakat kullanılmıyor.*/
+
+    div {
+        font-size: 24px !important;
+    }
+        /*Cursor değişme*/
+    a{
+        cursor: pointer;
+    }
+
+        /* Inline-Block seviyesinde yan yana gelsinler Merhabadan önce bir çizgi olsun ve ortada olsun bu çizgi*/
+
+    .kutu{
+        margin: 0;
+        padding: 0;
+        border: 1px solid red;
+        display: block;
+        position: relative; /* Tamamen kutunun sınırlarını çiziyor. Kutunun dışına çıkmayacak*/
+        overflow: hidden; /* Taşan şeyi göstermez*/
+        border-radius: 30%;
+    }
+    .cizgi{
+        border: 1px solid green;
+        display: inline-block;
+        width: 50px;
+        height: 2px;
+        vertical-align: middle;
+    }
+    .baslik{
+        border: 1px solid blue;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    /* Div içerisindeki elementlerin hizalaması.*/
+
+    .hizalama{
+        display: block;
+        position: relative;
+        border: 1px solid red;
+        width: 400px;
+        height: 400px;
+    }
+
+    .hizalama h1{
+        position: absolute;
+        top: 50%;
+        left: 50%; /*Metnin 0 noktası tam ortalanır fakat bizim metinin ortasının ortada durmasını istiyoruz.*/
+        transform: translate(-50%,-50%); /* Tam ortalamamızı sağlıyoruz.*/
+    }
